@@ -1,0 +1,7 @@
+<h6>{{this.suite.suiteName}}</h6>
+<button (click)="show()">{{btnText}}</button>
+<ol *ngIf ="isShown">
+    <li *ngFor = "let case of this.suite.junitCases">
+    <app-junitcase  [junitcase] = "case" [ngStyle]="{'color': case.failure === undefined ? 'green' : 'red'}"></app-junitcase>
+    </li>
+</ol>

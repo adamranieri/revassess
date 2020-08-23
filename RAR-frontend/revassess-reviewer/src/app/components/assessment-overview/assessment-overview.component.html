@@ -1,0 +1,9 @@
+<h3>Assessment Overview for {{this.assessment.associateName}}</h3>
+
+
+<button (click)="show()">{{btnText}}</button>
+<ol *ngIf = "isShown">
+    <li *ngFor ="let suite of this.assessment.junitSuites">
+<app-junitsuite  [suite]= "suite" ></app-junitsuite>
+    </li>
+</ol>
